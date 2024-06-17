@@ -19,10 +19,10 @@ def load_mistral_api_key(ret_key=False):
     global api_key
     global dlai_endpoint
     api_key = os.getenv("MISTRAL_API_KEY")
-    # dlai_endpoint = os.getenv("DLAI_MISTRAL_API_ENDPOINT")
+    dlai_endpoint = os.getenv("MISTRAL_7B_ENDPOINT")
 
     global client
-    client = MistralClient(api_key=api_key)
+    client = MistralClient(api_key=api_key, endpoint=dlai_endpoint)
     
     if ret_key:
         return api_key, dlai_endpoint
@@ -31,7 +31,7 @@ def load_mistral_api_key(ret_key=False):
 def mistral(user_message, 
             model="mistral-small-latest",
             is_json=False):
-    client = MistralClient(api_key=api_key)
+    client = MistralClient(api_key=api_key, endpoint=dlai_endpoint)
     messages = [ChatMessage(role="user", content=user_message)]
 
     if is_json:
