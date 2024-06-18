@@ -6,8 +6,14 @@ This repository contains all the lessons and materials from a short course on Mi
 ### Contents
 The repository is organized into the following sections:
 
+\n
 Lesson 1: Prompting
+\n
 Lesson 2: Model Selection
+\n
 Lesson 3: Function Calling
+\n
 Lesson 4: RAG from Scratch
+\n
 Lesson 5: Chatbot
+\n
